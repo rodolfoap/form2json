@@ -1,0 +1,20 @@
+<h1>Instance</h1>
+<hr>
+{{if .Edit}}
+	<form method="POST">
+		<label>Id: </label>{{.Id}}<br /><br />
+		<label>Scope:</label><br />		<input type="text" name="scope"		value="{{.Scope}}"><br />
+		<label>Type:</label><br />		<input type="text" name="type"		value="{{.Type}}"><br />
+		<label>Definition:</label><br />	<input type="text" name="definition"	value="{{.Definition}}"><br />
+		<label>Campaign:</label><br />		<input type="text" name="campaign"	value="{{.Campaign}}"><br />
+		<label>Notes:</label><br />		<textarea name="notes">{{.Notes}}</textarea><br />
+		<input type="submit">
+	</form>
+{{else}}
+	<label>Id:		</label>{{.Id}}<br /><br />
+	<label>Scope:		</label>{{.Scope}}<br />
+	<label>Type: 		</label>{{.Type}}<br />
+	<label>Definition:	</label>{{.Definition}}<br />
+	<label>Campaign:	</label>{{.Campaign}}<br />
+	<label>Notes:		</label>{{.Notes}}<br />
+{{end}}

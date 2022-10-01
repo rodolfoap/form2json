@@ -1,0 +1,13 @@
+<h1>Scenario</h1>
+<hr>
+{{if .Edit}}
+	<form method="POST">
+		<label>Id: </label>{{.Id}}<br /><br />
+		<label>Constraint:</label><br />	<textarea name="constraint">{{.Constraint}}</textarea><br />
+		<input type="submit">
+	</form>
+{{else}}
+	<label>Id:		</label>{{.Id}}<br /><br />
+	<label>Constraint:	</label>{{.Constraint}}<br />
+{{end}}
+
